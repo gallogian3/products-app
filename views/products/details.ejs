@@ -10,11 +10,12 @@
     <ul>
         <li>Price: $<%= product.price %></li>
         <li>Category: <a href="/products?category=<%= product.category %>"><%= product.category %></a></li>
+        <li><a href="/farms/<%=product.farm._id%>"><%=product.farm.name%></a></li> 
     </ul>
-    <a href="/products">BACK TO PRODUCTS</a>
-    <a href="/products/<%= product._id %>/edit">EDIT</a>
+    <a href="/products">Back to products</a>
+    <a href="/products/<%= product._id %>/edit">Edit</a>
     <form action="/products/<%= product._id%>?_method=DELETE" method="post">
-        <button>DELETE</button>
+        <button>Delete</button>
     </form>
 </body>
 </html>
